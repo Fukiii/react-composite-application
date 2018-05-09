@@ -1,0 +1,44 @@
+{
+  "runtime": {
+    "both": {
+      "type": 5,
+      "api": {
+        "host": "",
+        "port": "443",
+        "pid": "OqMVXvXp"
+      }
+    },
+    "client": {
+      "platform": "",
+      "domain": "",
+      "debug": false,
+      "analyze": false,
+      "fps": 60,
+      "language": "zh",
+      "tts_api": {
+        "baidu_tts": "http://tsn.baidu.com/",
+        "baidu_translate_tts": "http://fanyi.baidu.com/"
+      },
+      "cdn_path": "",
+      "wechat": {
+        "app_id": ""
+      },
+      "resources": {
+      },
+  
+      "host": {
+      }
+    },
+    "server": {
+      "origin_server": {
+        "ip": "0.0.0.0",
+        "port": "4000"
+      },
+      "https": {
+        "enabled": false,
+        "crt": "",
+        "key": ""
+      }
+    }
+  }
+}

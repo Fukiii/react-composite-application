@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "target": "es6",
+    "lib": ["dom", "es2016"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "removeComments": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "./types/*"
+      ],
+      "src/*": ["./src/*"],
+      "root": ["."],
+      "components/*": [
+        "./src/components/*"
+      ]
+    },
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "plugins": [
+      { "name": "tslint-language-service"}
+    ]
+  },
+  "files": [
+    "src/index/index.tsx",
+    "src/player/index.tsx",
+    "./global.d.ts"
+  ],
+  "include": [
+    "types",
+    "acceptance_test",
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "useBabel": true
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "lodash"
+        ]
+      ]
+    }
+  },
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    "transform-runtime",
+    [
+      "transform-imports"
+    ],
+    "syntax-dynamic-import"
+  ]
+}

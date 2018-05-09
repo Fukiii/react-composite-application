@@ -1,0 +1,42 @@
+#vim
+*~
+*.sw?
+
+# python
+*.pyc
+*.py
+
+# generic editing tools
+tags
+
+#mac
+*.DS_Store
+
+# build tools
+node_modules/
+typings/
+
+# logfiles
+*.log
+.idea/
+.vscode/
+
+# build artifacts
+dist/
+build/
+webpack/dll/
+stats.json
+
+# config override
+config/local.json
+
+# Docs
+doc/
+
+# insecure_cert
+insecure_cert/localhost.crt
+insecure_cert/localhost.key
+
+coverage/
+
+.qshell/
