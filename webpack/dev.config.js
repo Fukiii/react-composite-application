@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+const HtmlWebpackIncludeAssetsPlugin
+  = require('html-webpack-include-assets-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -88,14 +90,18 @@ const config_dev = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    // new webpack.DllReferencePlugin({
-    //   context: config.PATH_ROOT,
-    //   manifest: require('./dll/vender-manifest.json'),
-    // }),
-    // new CopyWebpackPlugin([{
-    //   from: path.resolve(__dirname, 'dll'),
-    //   to: 'dll',
-    // }]),
+    new webpack.DllReferencePlugin({
+      context: path.join(__dirname, 'dll'),
+      manifest: require('./dll/vender-manifest.json'),
+    }),
+    new CopyWebpackPlugin([{
+      from: path.resolve(__dirname, 'dll'),
+      to: 'dll',
+    }]),
+    new HtmlWebpackIncludeAssetsPlugin({
+      assets: ['dll/vender.dll.js'],
+      append: false,
+    }),
     new HtmlWebpackPlugin({
       filename: config.INDEX_HTML,
       chunks: ['box', 'commons', 'runtime'],

@@ -10,14 +10,14 @@ module.exports = {
     ],
   },
   output: {
-    path: path.resolve(__dirname, 'dll'),
+    path: path.resolve(__dirname, '../dist', 'dll'),
     filename: '[name].dll.js',
     library: '[name]_[hash]',
   },
   mode: 'development',
   plugins: [
     new webpack.DllPlugin({
-      path: path.resolve(__dirname, 'dll/[name]-manifest.json'),
+      path: path.resolve(__dirname, '../dist', 'dll/[name]-manifest.json'),
       name: '[name]_[hash]',
     }),
   ],

@@ -2891,7 +2891,7 @@ html-minifier@^3.2.3:
     relateurl "0.2.x"
     uglify-js "3.4.x"
 
-html-webpack-include-assets-plugin@^1.0.4:
+html-webpack-include-assets-plugin@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/html-webpack-include-assets-plugin/-/html-webpack-include-assets-plugin-1.0.6.tgz#c67cb824a0db22382eb36b0ae34a602a8a03db8c"
   dependencies:
