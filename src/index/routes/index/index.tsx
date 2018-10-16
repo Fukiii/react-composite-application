@@ -5,7 +5,7 @@ import { Header } from 'src/components/header';
 const style = require('./index.less');
 
 @CSSModules(style, { allowMultiple: true })
-export default class Ide extends React.Component<any, any> {
+export default class Index extends React.Component<any, any> {
   constructor(props:any, context:any) {
     super(props, context);
   }
@@ -16,7 +16,9 @@ export default class Ide extends React.Component<any, any> {
           <Header />
         </div>
         <div styleName="content">
-
+          {
+            this.props.children ? this.props.children : ''
+          }
         </div>
       </div>
     );

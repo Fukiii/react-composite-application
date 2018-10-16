@@ -6,7 +6,6 @@ import { Route, BrowserRouter } from 'react-router-dom';
 
 import { init_config, config } from 'src/utils/config';
 import * as I18nTools from 'src/utils/i18n';
-import { Player } from 'src/components/player';
 import { create_store } from 'src/redux/root_store';
 require('src/commons/base.css');
 

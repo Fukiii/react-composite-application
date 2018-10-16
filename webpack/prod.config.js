@@ -110,24 +110,9 @@ const config_prod = {
     }),
     new HtmlWebpackPlugin({
       filename: config.INDEX_HTML,
-      chunks: ['boxv2', 'commons', 'runtime'],
+      chunks: ['box', 'commons', 'runtime'],
       favicon: 'favicon.ico',
       template: path.join(config.PATH_ROOT, 'src/index/index.ejs'),
-      hash: true,
-      minify: {
-        removeAttributeQuotes: true,
-        collapseWhitespace: true,
-        html5: true,
-        minifyCSS: true,
-        removeComments: true,
-        removeEmptyAttributes: true,
-      }
-    }),
-    new HtmlWebpackPlugin({
-      filename: config.PLAYER_HTML,
-      chunks: ['palyer', 'commons', 'runtime'],
-      favicon: 'favicon.ico',
-      template: path.join(config.PATH_ROOT, 'src/player/index.ejs'),
       hash: true,
       minify: {
         removeAttributeQuotes: true,

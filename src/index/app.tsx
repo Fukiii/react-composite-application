@@ -7,11 +7,6 @@ export class App extends React.Component<any, any> {
   constructor(props:any, context:any) {
     super(props, context);
   }
-  componentWillMount() {
-    if (this.props.location.pathname == '/') {
-      this.props.history.push('/ide');
-    }
-  }
   render() {
     return (
       <div className="root">

@@ -4,7 +4,6 @@ const cfg = require('../config')();
 
 module.exports = {
   INDEX_HTML: 'index.html', // Name of the output index.html.
-  PLAYER_HTML: 'player.html',
   PUBLIC_PATH_ASSET:'/',
   PATH_SRC: path.resolve(__dirname, '../src'),
   PATH_ROOT: path.resolve(__dirname, '..'),

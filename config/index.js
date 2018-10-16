@@ -4,7 +4,7 @@ var fs = require('fs');
 var path = require('path');
 
 var cfg_dir = path.join(__dirname);
-var cfg_env_var = 'BOXV2';
+var cfg_env_var = 'BOX';
 
 var empty_config = {
   both: {},

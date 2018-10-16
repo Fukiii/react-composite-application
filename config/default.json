@@ -15,10 +15,6 @@
       "analyze": false,
       "fps": 60,
       "language": "zh",
-      "tts_api": {
-        "baidu_tts": "http://tsn.baidu.com/",
-        "baidu_translate_tts": "http://fanyi.baidu.com/"
-      },
       "cdn_path": "",
       "wechat": {
         "app_id": ""

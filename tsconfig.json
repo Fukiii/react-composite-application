@@ -31,7 +31,6 @@
   },
   "files": [
     "src/index/index.tsx",
-    "src/player/index.tsx",
     "./global.d.ts"
   ],
   "include": [

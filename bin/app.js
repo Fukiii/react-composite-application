@@ -8,8 +8,8 @@ var proxy = require('http-proxy-middleware');
 let _config = require('../config/index.js')();
 let webpack_config = require(path.join(__dirname, '../webpack/base_config'));
 let index_path = path.join(__dirname, '../dist/index.html');
-let player_path = path.join(__dirname, '../dist/player.html');
-let error_path = path.join(__dirname, '../dist/error.html');
+// let player_path = path.join(__dirname, '../dist/player.html');
+// let error_path = path.join(__dirname, '../dist/error.html');
 var compiler;
 
 app.use(compression());
@@ -34,25 +34,11 @@ if (process.env.NODE_ENV === 'development') {
   app.use(require("webpack-hot-middleware")(compiler));
 
   app.use('/', (req, res, next) => {
-    if (req.url.indexOf('/p') < 0) {
-      dev_send_html(res, webpack_config.INDEX_HTML);
-    } else {
-      next();
-    }
-  })
-  app.get('/p', (req, res) => {
-    dev_send_html(res, webpack_config.PLAYER_HTML);
+    dev_send_html(res, webpack_config.INDEX_HTML);
   })
 } else {
   app.use('/', (req, res, next) => {
-    if (req.url.indexOf('/p') < 0) {
-      res.sendFile(index_path);
-    } else {
-      next();
-    }
-  })
-  app.get('/p', (req, res) => {
-    res.sendFile(player_path);
+    res.sendFile(index_path);
   })
 }
 

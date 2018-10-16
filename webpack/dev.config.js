@@ -8,10 +8,7 @@ const config = require('./base_config');
 
 const config_dev = {
   entry: {
-    boxv2: [
-      "webpack-hot-middleware/client?reload=true&timeout=2000&overlay=false"
-    ],
-    player: [
+    box: [
       "webpack-hot-middleware/client?reload=true&timeout=2000&overlay=false"
     ],
   },
@@ -101,15 +98,9 @@ const config_dev = {
     // }]),
     new HtmlWebpackPlugin({
       filename: config.INDEX_HTML,
-      chunks: ['boxv2', 'commons', 'runtime'],
+      chunks: ['box', 'commons', 'runtime'],
       favicon: 'favicon.ico',
       template: path.join(config.PATH_ROOT, 'src', 'index', 'index.ejs'),
-    }),
-    new HtmlWebpackPlugin({
-      filename: config.PLAYER_HTML,
-      chunks: ['player', 'commons', 'runtime'],
-      favicon: 'favicon.ico',
-      template: path.join(config.PATH_ROOT, 'src', 'player', 'index.ejs'),
     }),
   ],
   devtool: 'cheap-module-inline-source-map',

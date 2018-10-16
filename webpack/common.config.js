@@ -10,11 +10,8 @@ const dev_mode = process.env.NODE_ENV !== 'production';
 
 config_common = {
   entry: {
-    boxv2: [
+    box: [
       path.join(config.PATH_ROOT, 'src/index/index.tsx'),
-    ],
-    player: [
-      path.join(config.PATH_ROOT, 'src/player/index.tsx'),
     ],
   },
   output: {
